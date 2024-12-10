@@ -11,7 +11,7 @@ std::vector<BenhNhan> danhSachBenhNhan;
 
 // Các hàm quản lý bệnh nhân
 //----------------------------------------------------------------
-// Lưu danh sách bệnh nhân ra file
+/*// Lưu danh sách bệnh nhân ra file txt
 void ghiDanhSachBenhNhan() {
   ofstream file("benhnhan.csv");
   for (const auto &bn : danhSachBenhNhan) {
@@ -20,22 +20,23 @@ void ghiDanhSachBenhNhan() {
          << " | SDT:" << bn.getSDT() << "\n";
   }
   file.close();
-}
+}*/
 
-/*// Lưu danh sách bệnh nhân ra file CSV
+// Lưu danh sách bệnh nhân ra file (theo định dạng CSV)
 void ghiDanhSachBenhNhan() {
-  std::ofstream file("benhnhan.csv", std::ios::out);
+  ofstream file("benhnhan.csv");
 
-  // Ghi tiêu đề (header)
-  file << "ID,Ten,Tuoi,Diachi,SDT\n";
+  // Ghi tiêu đề cột
+  file << "ID,Ten,Tuoi,DiaChi,SDT\n";
 
-  // Ghi dữ liệu các bệnh nhân
+  // Ghi dữ liệu bệnh nhân
   for (const auto &bn : danhSachBenhNhan) {
     file << bn.getID() << "," << bn.getTen() << "," << bn.getTuoi() << ","
          << bn.getDiaChi() << "," << bn.getSDT() << "\n";
   }
+
   file.close();
-}*/
+}
 
 // Thêm bệnh nhân
 void themBenhNhan() {

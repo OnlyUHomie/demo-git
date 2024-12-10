@@ -12,14 +12,30 @@ using namespace std;
 // Danh sách cuộc hẹn
 std::vector<CuocHen> danhSachCuocHen;
 
-// Lưu dữ liệu vào file danh sách cuộc hẹn
+/*// Lưu dữ liệu vào file danh sách cuộc hẹn
 void ghiDanhSachCuocHen() {
-  ofstream file("cuochen.txt");
+  ofstream file("cuochen.csv");
   for (const auto &bn : danhSachCuocHen) {
     file << "IDBN:" << bn.getIDBN() << " | NgayHen:" << bn.getNgayHen()
          << " | GioHen:" << bn.getGioHen() << " | LyDo:" << bn.getLyDo()
          << "\n";
   }
+  file.close();
+}*/
+
+// Lưu danh sách bệnh nhân ra file (theo định dạng CSV)
+void ghiDanhSachCuocHen() {
+  ofstream file("cuochen.csv");
+
+  // Ghi tiêu đề cột
+  file << "IDBenhNhan,NgayHen,GioHen,LyDo\n";
+
+  // Ghi dữ liệu bệnh nhân
+  for (const auto &bn : danhSachCuocHen) {
+    file << bn.getIDBN() << " , " << bn.getNgayHen() << " , " << bn.getGioHen()
+         << " , " << bn.getLyDo() << "\n";
+  }
+
   file.close();
 }
 
