@@ -12,6 +12,8 @@ using namespace std;
 // Danh sách cuộc hẹn
 std::vector<CuocHen> danhSachCuocHen;
 
+// Các hàm quản lý cuộc hẹn
+//----------------------------------------------------------------
 /*// Lưu dữ liệu vào file danh sách cuộc hẹn
 void ghiDanhSachCuocHen() {
   ofstream file("cuochen.csv");
