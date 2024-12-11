@@ -19,7 +19,7 @@ int menuGiaoDien(vector<string> options) {
   do {
     clearScreen();
     cout << "+-------------------------------------------------------+\n";
-    cout << "|~~~~~~~~~~~~~~~ PHONG KHAM DA KHOA ~~~~~~~~~~~~~~~|\n";
+    cout << "|~~~~~~~~~~~~~~~~~ PHONG KHAM DA KHOA ~~~~~~~~~~~~~~~~~~|\n";
     cout << "+-------------------------------------------------------+\n\n";
     for (size_t i = 0; i < options.size(); ++i) {
       if (i == selection)
