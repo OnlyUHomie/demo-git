@@ -26,7 +26,7 @@ int menuGiaoDien(char options[MAX_OPTIONS][100], int numOptions) {
   do {
     clearScreen();
     printf("+-------------------------------------------------------+\n");
-    printf("|~~~~~~~~~~~~~~~ PHONG KHAM DA KHOA ~~~~~~~~~~~~~~~|\n");
+    printf("|~~~~~~~~~~~~~~~~~~ PHONG KHAM DA KHOA ~~~~~~~~~~~~~~~~~|\n");
     printf("+-------------------------------------------------------+\n\n");
 
     for (int i = 0; i < numOptions; ++i) {
@@ -146,7 +146,7 @@ void inHoaDon(BenhNhan bn) {
   }
   printf("\n=========================\n");
   printf("Nhap phim bat ky de quay lai.");
-  getchar(); // Chờ nhấn phím bất kỳ để quay lại
+  // getchar(); // Chờ nhấn phím bất kỳ để quay lại
 }
 
 // Hàm quản lý thanh toán
